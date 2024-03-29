@@ -2,13 +2,26 @@
 <html>
 <head>
     <title>Cadastro de Clientes</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            width: 50%; /* Ajuste conforme necessário */
+        }
+    </style>
 </head>
 <body>
-    <h1>Cadastro de Clientes</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Cadastrar</button>
-    </form>
+    <div class="container">
+        <h1>Cadastro de Clientes</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
 </body>
 </html>
