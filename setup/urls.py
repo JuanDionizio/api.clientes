@@ -12,6 +12,6 @@ router.register('clientes', ClientesViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('cliente/', include('clientes.urls')),
+    path('', include('clientes.urls')),
     
 ]
